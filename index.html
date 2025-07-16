@@ -2,79 +2,67 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Student Registration System</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Registration System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-gray-100 text-gray-800 font-sans p-3 min-h-screen bg-left" style="background-image: url('bga_img.jfif');background-position: center; background-size: cover;">
-  <h1 class="text-3xl font-bold text-center text-black text-pink-600 mt-2">Student Registration System</h1>
+<body class="bg-gray-100 text-gray-800 font-sans p-3 min-h-screen bg-left"
+    style="background-image: url('bga_img.jfif');background-position: center; background-size: cover;">
+    <h1 class="text-3xl font-bold text-center text-black text-pink-600 mt-2">Student Registration System</h1>
+    <div class="justify-center flex flex-col md:flex-row justify-around mt-4 px-1 ">
+        <section>
+            <div class="max-w-sm wp-content min-h-screen-full rounded-2xl shadow-xl shadow-amber-900">
+                <div class="flex justify-center mb-8 ">
+                    <img src="new-student-registration.png" alt="Logo" class="w-16 h-14">
+                </div>
 
-  <div class="justify-center flex flex-col md:flex-row justify-around mt-4 px-1 ">
-    <section>
-      <div class="max-w-sm wp-content min-h-screen-full rounded-2xl shadow-xl shadow-amber-900">
-        <div class="flex justify-center mb-8 ">
-          <img src="new-student-registration.png" alt="Logo" class="w-17 h-14">
-        </div>
-        <!-- <header class="text-center mb-6">
-        <p class="text-sm text-blue-600 mt-2">Register, edit, and manage student records with ease.</p>
-      </header> -->
-        <!-- <section> -->
-        <main class="flex flex-col md:flex-row justify-around mt-10 px-5 py-4 rounded-2xl ">
-          <!-- bg-blue-600 p-6 rounded-lg shadow-md flex flex-wrap gap-4 justify-center mb-6 -->
-          <form id="studentForm" class="justify-center flex flex-wrap mb-6 p-0 ">
-            <input type="text" id="name" placeholder="Student Name"
-              class="w-full p-2 border rounded mb-4 bg-pink-800 text-gray-300 placeholder-white p-4 rounded-lg w-60 focus:outline-none focus:ring-2 focus:ring-white-900 transition"
-              required />
-            <input type="text" id="studentId" placeholder="Student ID"
-              class="w-full p-2 border rounded mb-4 bg-pink-800 text-gray-300 placeholder-white p-4 rounded-lg w-60 focus:outline-none focus:ring-2 focus:ring-white-900 transition"
-              required />
-            <input type="email" id="email" placeholder="Email ID"
-              class="w-full p-2 border rounded mb-4 bg-pink-800 text-gray-300 placeholder-white p-4 rounded-lg w-60 focus:outline-none focus:ring-2 focus:ring-white-900 transition"
-              required />
-            <input type="text" id="contact" placeholder="Contact No"
-              class="w-full p-2 border rounded mb-4 bg-pink-800 text-gray-300 placeholder-white p-4 rounded-lg w-60 focus:outline-none focus:ring-2 focus:ring-white-900 transition"
-              required />
-            <button
-              class="mt-4 bg-cyan-400 hover:bg-cyan-300 text-black font-semibold px-8 py-3 rounded-2xl shadow-lg shadow-cyan-500/50 hover:shadow-cyan-400 transition-all duration-300">
-              Register <i class="fas fa-arrow-right ml-2"></i>
-            </button>
-          </form>
-      </div>
-    </section>
-    <!-- </div> -->
-    <section>
-      <div>
-        <!-- <h2 class="flex-wrap text-center mb-6 rounded-full font-semibold mb-2">Registered Students</h2> -->
-      </div>
-    </section>
-    <!-- Registered Details Table-->
-    <section>
-      <div class="container mx-auto px-4 py-8 flex flex-row items-center justify-between gap-12">
-        <div class="container mx-auto flex flex-row items-center justify-between gap-12">
-
-          <div class="overflow-x-auto w-full md:w-8/10 rounded-2xl background-color: transparent;">
-            <table class="w-full border-6 shadow-md rounded" id="studentTable">
-              <thead class="bg-pink-800 p-6 shadow-md rounded-2xl text-white">
-                <tr>
-                  <th class="px-4 py-2 border-2 shadow-md">Name</th>
-                  <th class="px-4 py-2 border-2">Student ID</th>
-                  <th class="px-4 py-2 border-2">Email</th>
-                  <th class="px-4 py-2 border-2">Contact No</th>
-                  <th class="px-4 py-2 text-center border-2">Actions</th>
-                </tr>
-              </thead>
-              <tbody id="studentList"></tbody>
-            </table>
-          </div>
-
-        </div>
-      </div>
-      </main>
-    </section>
-
-    <script src="script.js"></script>
+                <!-- Form Design -->
+                
+                <main class="flex flex-col md:flex-row justify-around mt-10 px-5 py-4 rounded-2xl ">
+                    <form id="studentForm" class="justify-center flex flex-wrap mb-6 p-0 ">
+                        <input type="text" id="name" placeholder="Student Name"
+                            class="w-full p-2 border rounded mb-4 bg-pink-800 text-gray-300 placeholder-white p-4 rounded-lg w-60 focus:outline-none focus:ring-2 focus:ring-white-900 transition"
+                            required />
+                        <input type="text" id="studentId" placeholder="Student ID"
+                            class="w-full p-2 border rounded mb-4 bg-pink-800 text-gray-300 placeholder-white p-4 rounded-lg w-60 focus:outline-none focus:ring-2 focus:ring-white-900 transition"
+                            required />
+                        <input type="email" id="email" placeholder="Email ID"
+                            class="w-full p-2 border rounded mb-4 bg-pink-800 text-gray-300 placeholder-white p-4 rounded-lg w-60 focus:outline-none focus:ring-2 focus:ring-white-900 transition"
+                            required />
+                        <input type="text" id="contact" placeholder="Contact No"
+                            class="w-full p-2 border rounded mb-4 bg-pink-800 text-gray-300 placeholder-white p-4 rounded-lg w-60 focus:outline-none focus:ring-2 focus:ring-white-900 transition"
+                            required />
+                        <button
+                            class="mt-4 bg-cyan-400 hover:bg-cyan-300 text-black font-semibold px-8 py-3 rounded-2xl shadow-lg shadow-cyan-500/50 hover:shadow-cyan-400 transition-all duration-300">
+                            Register <i class="fas fa-arrow-right ml-2"></i>
+                        </button>
+                    </form>
+            </div>
+        </section>
+        <!-- Registered Details Table-->
+        <section>
+            <div class="container mx-auto px-2 py-1 flex flex-row items-center justify-between">
+                <div class="container px-6 py-1 flex flex-row items-center justify-between">
+                    <div class="overflow-x-auto max-h-96 rounded-2xl background-color: transparent;">
+                        <table class="border-6 shadow-md rounded">
+                            <thead class="overflow-x-auto bg-pink-800 p-8 shadow-md rounded-2xl text-white">
+                                <tr>
+                                    <th class="px-2 py-2 border-2 shadow-md">Name</th>
+                                    <th class="px-2 py-2 border-2">Student ID</th>
+                                    <th class="px-2 py-2 border-2">Email</th>
+                                    <th class="px-2 py-2 border-2">Contact No</th>
+                                    <th class="px-2 py-2 text-center border-2">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="studentList"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            </main>
+        </section>
+        <script src="script.js"></script>
 </body>
-
 </html>
